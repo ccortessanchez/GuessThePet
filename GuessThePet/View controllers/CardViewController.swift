@@ -49,6 +49,7 @@ class CardViewController: UIViewController {
     if segueIdentifier(for: segue) == .reveal,
       let destinationViewController = segue.destination as? RevealViewController {
       destinationViewController.petCard = petCard
+      destinationViewController.transitioningDelegate = self
     }
   }
   
@@ -60,6 +61,12 @@ class CardViewController: UIViewController {
 extension CardViewController: SegueHandlerType {
   enum SegueIdentifier: String {
     case reveal
+  }
+}
+
+extension CardViewController: UIViewControllerTransitioningDelegate {
+  func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    return FlipPresentAnimationController(originFrame: cardView.frame)
   }
 }
 
