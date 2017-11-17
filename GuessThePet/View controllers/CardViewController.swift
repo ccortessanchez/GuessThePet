@@ -69,11 +69,24 @@ extension CardViewController: UIViewControllerTransitioningDelegate {
     return FlipPresentAnimationController(originFrame: cardView.frame)
   }
   
-  func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    guard let _ = dismissed as? RevealViewController else {
-      return nil
-    }
-    return FlipDismissAnimationController(destinationFrame: cardView.frame)
+  func animationController(forDismissed dismissed: UIViewController)
+    -> UIViewControllerAnimatedTransitioning? {
+      guard let revealVC = dismissed as? RevealViewController else {
+        return nil
+      }
+      return FlipDismissAnimationController(destinationFrame: cardView.frame,
+                                            interactionController: revealVC.swipeInteractionController)
+  }
+  
+  func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning)
+    -> UIViewControllerInteractiveTransitioning? {
+      guard let animator = animator as? FlipDismissAnimationController,
+        let interactionController = animator.interactionController,
+        interactionController.interactionInProgress
+        else {
+          return nil
+      }
+      return interactionController
   }
 }
 

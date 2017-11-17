@@ -35,10 +35,13 @@ class RevealViewController: UIViewController {
   
   var petCard: PetCard?
   
+  var swipeInteractionController: SwipeInteractionController?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     titleLabel.text = petCard?.name
     imageView.image = petCard?.image
+    swipeInteractionController = SwipeInteractionController(viewController: self)
   }
   
   @IBAction func dismissPressed(_ sender: UIButton) {

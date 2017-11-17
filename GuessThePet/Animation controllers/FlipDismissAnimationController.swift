@@ -32,8 +32,11 @@ class FlipDismissAnimationController: NSObject, UIViewControllerAnimatedTransiti
   
   private let destinationFrame: CGRect
   
-  init(destinationFrame: CGRect) {
+  let interactionController: SwipeInteractionController?
+  
+  init(destinationFrame: CGRect, interactionController: SwipeInteractionController?) {
     self.destinationFrame = destinationFrame
+    self.interactionController = interactionController
   }
   
   func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {

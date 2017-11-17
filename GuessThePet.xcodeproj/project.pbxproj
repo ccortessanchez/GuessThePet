@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A2ABC2E1FAB471E00496BC0 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2ABC2D1FAB471E00496BC0 /* FlipPresentAnimationController.swift */; };
+		0A499EA31FBF165100E4A870 /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A499EA21FBF165100E4A870 /* SwipeInteractionController.swift */; };
 		0A4A2D5D1FAC625A002BD5B5 /* FlipDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A2D5C1FAC625A002BD5B5 /* FlipDismissAnimationController.swift */; };
 		18F4A6551F6355560076435C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F4A6541F6355560076435C /* Launch Screen.storyboard */; };
 		18F4A6591F635A6D0076435C /* StoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4A6581F635A6D0076435C /* StoryboardSupport.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0A2ABC2D1FAB471E00496BC0 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
+		0A499EA21FBF165100E4A870 /* SwipeInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
 		0A4A2D5C1FAC625A002BD5B5 /* FlipDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipDismissAnimationController.swift; sourceTree = "<group>"; };
 		18F4A6541F6355560076435C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		18F4A6581F635A6D0076435C /* StoryboardSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSupport.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		BB3B33DF1B40654F00B5C810 /* Interaction controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A499EA21FBF165100E4A870 /* SwipeInteractionController.swift */,
 			);
 			path = "Interaction controllers";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				0A4A2D5D1FAC625A002BD5B5 /* FlipDismissAnimationController.swift in Sources */,
 				BB3B33DD1B4064E600B5C810 /* PetCardStore.swift in Sources */,
 				BB3B33CD1B4038ED00B5C810 /* RevealViewController.swift in Sources */,
+				0A499EA31FBF165100E4A870 /* SwipeInteractionController.swift in Sources */,
 				BB3B33D41B403BAF00B5C810 /* PetCard.swift in Sources */,
 				0A2ABC2E1FAB471E00496BC0 /* FlipPresentAnimationController.swift in Sources */,
 				BBC248791B4D8EFD00F4C642 /* AnimationHelper.swift in Sources */,
